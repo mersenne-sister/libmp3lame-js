@@ -21064,6 +21064,7 @@ function _lame_encode_buffer_template($gfp,$buffer_l,$buffer_r,$nsamples,$mp3buf
     $$01$i = $$01$ph$i;$in_buffer$sroa$0$0$i = $in_buffer$sroa$0$0$ph$i;$in_buffer$sroa$1$0$i = $in_buffer$sroa$1$0$ph$i;
     while(1) {
      $56 = ($$01$i|0)>(0);
+     if (self && self.postMessage) self.postMessage({ type: 'progress', progress: $nsamples - $$01$i, total: $nsamples });
      if (!($56)) {
       $$0 = $mp3size$0$ph$i;
       label = 42;
